@@ -54,4 +54,15 @@ public class UserResourceController {
 		// URI(location) created above
 		return ResponseEntity.created(location).build();
 	}
+
+	public User deleteById(Integer id) {
+	for(User user : users) {
+		if(user.getId()==id) {
+			users.remove(user);
+			return user;
+		}
+	}
+	
+	return null;
+}
 }
