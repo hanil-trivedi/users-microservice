@@ -55,14 +55,13 @@ public class UserResourceController {
 		return ResponseEntity.created(location).build();
 	}
 
-	public User deleteById(Integer id) {
-	for(User user : users) {
-		if(user.getId()==id) {
-			users.remove(user);
-			return user;
+	// delete one user
+	@RequestMapping(value = "/users/{userId}", method = RequestMethod.DELETE)
+	public void deleteUser(@PathVariable Integer userId) {
+		User user=service.deleteById(userId);
+		if(user==null) {
+			throw new UserNotFoundException("This id is not present - "+userId);
 		}
 	}
 	
-	return null;
-}
 }
