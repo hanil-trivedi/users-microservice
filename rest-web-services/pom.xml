@@ -51,8 +51,12 @@
 		</dependency>		
 		
 		
-		<!-- XML support dependency : content negotiation - commented as xml representation 
-			doesn't work properly with other features we are going to use later on -->
+		<!-- for XML , we just need to add below dependency and our client should give "Accept" header 
+			with value as "Application/XML" and jackson will automatically do content negotiation based on the 
+			Accept header and will convert response to XML
+			XML support dependency : content negotiation - commented as xml representation 
+			doesn't work properly with other features we are going to use later on
+			 -->
 		<!-- <dependency> <groupId>com.fasterxml.jackson.dataformat</groupId> <artifactId>jackson-dataformat-xml</artifactId> 
 			</dependency> -->
 
