@@ -45,10 +45,11 @@
 		</dependency>
 		
 		<!-- Add for Basic Authentication  -->
-		<dependency>
+		<!-- commenting it out to make JPA app simple -->
+<!-- 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency> -->
 		
 		<!-- Visualizing APIs with HAL explorer: -->
 		<dependency>
